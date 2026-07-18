@@ -2,12 +2,19 @@ name: Build ROM
 on: [push]
 jobs:
   build:
-     runs-on: ubuntu-latest
-     steps:
-        - uses: actions/checkout@v4
-        - name: Build
-          run: |
-            sudo apt-get update
-            sudo apt-get install -y binutils-arm-none-eabi gcc-arm-none-eabi libpng-dev make
-            make
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y binutils-arm-none-eabi gcc-arm-none-eabi libpng-dev make git
+      - name: Build agbcc
+        run: |
+          git clone https://github.com/pret/agbcc
+          cd agbcc
+          ./build.sh
+          ./install.sh ../
+      - name: Build
+        run: make
 

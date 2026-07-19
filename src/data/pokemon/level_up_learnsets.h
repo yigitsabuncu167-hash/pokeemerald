@@ -2518,6 +2518,7 @@ static const u16 sBellossomLevelUpLearnset[] = {
 
 static const u16 sMarillLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOV3( 1, MOVE_FAIRY_WIND),
     LEVEL_UP_MOVE( 3, MOVE_DEFENSE_CURL),
     LEVEL_UP_MOVE( 6, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE(10, MOVE_WATER_GUN),

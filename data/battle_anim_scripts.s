@@ -10761,3 +10761,40 @@ Special_SubstituteToMon:
 Special_MonToSubstitute:
 	createvisualtask AnimTask_SwapMonSpriteToFromSubstitute, 2, FALSE
 	end
+
+
+Move_FAIRY_WIND:
+	loadspritegfx ANIM_TAG_BUBBLE
+	loadspritegfx ANIM_TAG_SMALL_BUBBLES
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	delay 1
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 15, -15, 10, 128, 100
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	waitplaysewithpan SE_M_BUBBLE2, SOUND_PAN_TARGET, 100
+	delay 6
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 35, 37, 40, 128, 100
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	waitplaysewithpan SE_M_BUBBLE2, SOUND_PAN_TARGET, 100
+	delay 6
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 10, -37, 30, 128, 100
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	waitplaysewithpan SE_M_BUBBLE2, SOUND_PAN_TARGET, 100
+	delay 6
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 30, 10, 15, 128, 100
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	waitplaysewithpan SE_M_BUBBLE2, SOUND_PAN_TARGET, 100
+	delay 6
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 20, 33, 20, 128, 100
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	waitplaysewithpan SE_M_BUBBLE2, SOUND_PAN_TARGET, 100
+	delay 6
+	createsprite gWaterBubbleProjectileSpriteTemplate, ANIM_ATTACKER, 2, 18, 0, 25, -30, 10, 128, 100
+	playsewithpan SE_M_BUBBLE, SOUND_PAN_ATTACKER
+	waitplaysewithpan SE_M_BUBBLE2, SOUND_PAN_TARGET, 100
+	waitforvisualfinish
+	call WaterBubblesEffectLong
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
+	end

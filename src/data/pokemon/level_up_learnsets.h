@@ -4678,9 +4678,7 @@ static const u16 sAzurillLevelUpLearnset[] = {
     LEVEL_UP_MOVE(16, MOVE_ROLLOUT),
     LEVEL_UP_MOVE(10, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE(13, MOVE_SWAGGER),
-    
     LEVEL_UP_END
-
 };
 
 static const u16 sSpoinkLevelUpLearnset[] = {

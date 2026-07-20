@@ -425,6 +425,7 @@ enum {
 #define JOHTO_DEX_COUNT     NATIONAL_DEX_CELEBI
 #define NATIONAL_DEX_COUNT  NATIONAL_DEX_DEOXYS
 
+
 // Hoenn Pokédex order
 enum {
     HOENN_DEX_NONE,
